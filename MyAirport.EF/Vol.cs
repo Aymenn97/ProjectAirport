@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A.MyAirport.EF
 {
-    class Vol
+    public class Vol
     {
         public int VOLID { get; set; }
         public int CIE { get; set; }

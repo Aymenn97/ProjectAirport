@@ -5,7 +5,7 @@ using System.Text;
 
 namespace A.MyAirport.EF
 {
-    class Bagage
+    public class Bagage
     {
         public int BAGAGEID{ get; set; }
         //[ForeignKey("VOLID")]
