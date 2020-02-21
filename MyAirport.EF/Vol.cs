@@ -8,12 +8,12 @@ namespace A.MyAirport.EF
     {
         public int VOLID { get; set; }
         public int CIE { get; set; }
-        public char LIG { get; set; }
-        public int JEX { get; set; }
-        public int DHC { get; set; }
-        public char PKG { get; set; }
-        public char IMM { get; set; }
-        public int PAX { get; set; }
-        public char DES { get; set; }
+        public string LIG { get; set; }
+        public short JEX { get; set; }
+        public DateTime DHC { get; set; }
+        public string PKG { get; set; }
+        public string IMM { get; set; }
+        public short PAX { get; set; }
+        public string DES { get; set; }
     }
 }
