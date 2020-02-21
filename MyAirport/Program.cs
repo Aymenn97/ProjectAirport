@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyAirport
+namespace A.MyAirport.console
 {
     class Program
     {

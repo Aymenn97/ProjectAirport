@@ -6,10 +6,16 @@ namespace A.MyAirport.EF
 {
     class Bagage
     {
-        public int ID_BAGAGE { get; set; }
-        public int ID_VOL { get; set; }
+        public int BAGAGEID{ get; set; }
+        public int VOLID { get; set; }
         public char CODE_IATA { get; set; }
         public int DATA_CREATION { get; set; }
-        public List<Post> Posts { get; set; }
+        public char CLASSE{ get; set; }
+        public Boolean PRIORITAIRE { get; set; }
+        public char STA { get; set; }
+        public char SSUR { get; set; }
+        public char DESTINATION { get; set; }
+        public char ESCALE { get; set; }
+      
     }
 }

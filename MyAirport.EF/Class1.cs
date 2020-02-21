@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyAirport.EF
+namespace A.MyAirport.EF
 {
     public class Class1
     {
