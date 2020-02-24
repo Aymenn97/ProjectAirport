@@ -4,14 +4,16 @@ using A.MyAirport.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace A.MyAirport.EF.Migrations
 {
     [DbContext(typeof(MyAirportContext))]
-    partial class MyAirportContextModelSnapshot : ModelSnapshot
+    [Migration("20200224131634_change")]
+    partial class change
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +52,7 @@ namespace A.MyAirport.EF.Migrations
                     b.Property<string>("STA")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("VOLID")
+                    b.Property<int>("VOLID")
                         .HasColumnType("int");
 
                     b.HasKey("BAGAGEID");
@@ -97,7 +99,9 @@ namespace A.MyAirport.EF.Migrations
                 {
                     b.HasOne("A.MyAirport.EF.Vol", "Vol")
                         .WithMany()
-                        .HasForeignKey("VOLID");
+                        .HasForeignKey("VOLID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -7,10 +7,11 @@ namespace A.MyAirport.EF
 {
     public class Bagage
     {
+        
         public int BAGAGEID{ get; set; }
         //[ForeignKey("VOLID")]
-        public int VOLID { get; set; }
-        public Vol Vol { get; set; }
+        public int? VOLID { get; set; }
+        public virtual Vol Vol { get; set; }
         public string CODE_IATA { get; set; }
         public DateTime DATA_CREATION { get; set; }
         public string CLASSE{ get; set; }
