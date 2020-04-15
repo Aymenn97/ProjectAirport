@@ -16,7 +16,7 @@ namespace A.MyAirport.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["MyAirport"].ConnectionString);
+            //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["MyAirport"].ConnectionString);
             optionsBuilder.UseLoggerFactory(MyAirportLoggerFactory);
         }
     }
